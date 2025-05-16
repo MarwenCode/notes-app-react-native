@@ -1,3 +1,4 @@
+// app/_layout.jsx
 import { Stack } from "expo-router";
 
 const RootLayout = () => {
@@ -5,7 +6,7 @@ const RootLayout = () => {
     <Stack
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#f4511e",
+          backgroundColor: "#222",
         },
         headerTintColor: "white",
         headerTitleStyle: {
@@ -16,14 +17,16 @@ const RootLayout = () => {
         contentStyle: {
           paddingHorizontal: 20,
           paddingTop: 20,
-          backgroundColor: "white",
+          backgroundColor: "#222", // Background global
         },
       }}
     >
       <Stack.Screen name="index" options={{ title: "Home" }} />
+      <Stack.Screen name="notes" options={{ title: "Notes" }} />
     </Stack>
   );
 };
 
 export default RootLayout;
+
 
